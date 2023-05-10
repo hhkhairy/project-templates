@@ -6,7 +6,7 @@ if __name__ == "__main__":
     #pyenv local "{{cookiecutter.venv_name}}"
     os.system('pyenv virtualenv "{{cookiecutter.python_version}}" "{{cookiecutter.venv_name}}"')
     os.system('pyenv local "{{cookiecutter.venv_name}}"')
-    os.system('pyenv activate "{{cookiecutter.venv_name}}"')
+    os.system('pyenv shell "{{cookiecutter.venv_name}}"')
 
     # POETRY configs
     os.system("poetry config virtualenvs.in-project false --local")
