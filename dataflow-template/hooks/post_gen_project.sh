@@ -1,7 +1,7 @@
 # Create the pyenv venv and activate it in cookiecutter
 echo "Starting pregen bash script"
-pyenv virtualenv "{{ cookiecutter.python_version }}" "{{ cookiecutter.venv_name }}"
-pyenv local "{{ cookiecutter.venv_name }}"
+pyenv virtualenv "{{cookiecutter.python_version}}" "{{cookiecutter.venv_name}}"
+pyenv local "{{cookiecutter.venv_name}}"
 
 
 ## Poetry
