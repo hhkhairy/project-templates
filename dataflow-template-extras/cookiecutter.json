@@ -1,0 +1,6 @@
+{
+    "project_slug": "your project name",
+    "package_name": "{{cookiecutter.project_slug.lower().strip().replace(' ', '_').replace('-', '_') }}",
+    "python_version": "3.8",
+    "add_jupyter": "y"
+}

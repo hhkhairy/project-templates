@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+packages = [{include = "{{ cookiecutter.package_name }}", from = "src"}]
+
+
+[tool.poetry.dependencies]
+python = "^{{ cookiecutter.python_version }}"
+pytest =  {version = "^7.2.0", optional = true}
+pytest-cov = {version = "^4.0.0", optional = true}
+ruff = {version = "^0.0.265", optional = true}
+{% if cookiecutter.add_jupyter == 'y' -%}
+jupyter = {version = "^1.0.0", optional = true}
+{% endif %}
+
+[tool.poetry.extras]
+test = ["ruff", "pytest", "pytest-cov"]
+{% if cookiecutter.add_jupyter == 'y' -%}
+dev = ["jupyter"]
+{% endif %}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
